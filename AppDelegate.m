@@ -24,7 +24,14 @@
     
     MyClass* mc = [[MyClass alloc] init];
     [[NSBundle mainBundle] loadNibNamed:@"MyNib" owner:mc options:nil];
+    
+    
+    ///My modifications to the myClass and ViewController classes
+    ///require some information being passed which leads to
+    ///some pretty strong coupling
     [mc setActiveView:self.viewController];
+    
+    
     [self.viewController setThisClass:mc];
     
     UILabel* lab = [mc valueForKey: @"theLabel"];
