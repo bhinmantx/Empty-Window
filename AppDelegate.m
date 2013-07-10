@@ -40,6 +40,9 @@
     lab.frame = CGRectIntegral(lab.frame);
     
     
+    //NSArray* myArray = [[NSArray alloc] initWithObjects:(id)@"marj.jpg",(id)@"marj2.jpg", nil];
+    
+    
     //UILabel* lab2 = [mc valueForKey:@"theAlert"];
     //[self.window.rootViewController.view addSubview:lab2];
     

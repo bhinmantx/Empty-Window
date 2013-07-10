@@ -66,10 +66,10 @@
 
 - (IBAction) buttonPressed:(id) sender {
     UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Howdy!" message:@"You tapped me" delegate:nil cancelButtonTitle:@"Cool" otherButtonTitles:nil];
-    int a = 24;
+   
 
     [self changeAlert];
-    a++;
+   
     [av show];
     
     //CGRect myImageRect = CGRectMake(0.0f, 0.0f, 320.0f, 109.0f);
@@ -81,7 +81,18 @@
     }
     else
     {
-        [myImageVar setImage:[UIImage imageNamed:@"marj2.jpg"]];
+        //[myImageVar setImage:[UIImage imageNamed:@"marj2.jpg"]];
+        
+        
+        myImageVar.animationImages = [NSArray arrayWithObjects:
+                                      [UIImage imageNamed:@"frame1.jpg"],
+                                      [UIImage imageNamed:@"frame2.jpg"],
+                                      [UIImage imageNamed:@"frame3.jpg"],
+                                      [UIImage imageNamed:@"frame4.jpg"], nil];
+                                                                        
+        myImageVar.animationDuration=2;
+        myImageVar.animationRepeatCount=5;
+        [myImageVar startAnimating];
         [self ChangeImgNumber];
     }
     [thisClass changeLabeltoDisplayedNumber:(self)];
