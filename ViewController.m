@@ -16,6 +16,7 @@
 {
     IBOutlet UILabel* theAlert;
     IBOutlet UIImageView* myImageVar;
+    
     int displayedImage;
     MyClass* thisClass;
 }
